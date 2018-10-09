@@ -4,7 +4,7 @@ import { BaseClient } from './interface';
 
 const APIClientBase = require('cluster-client').APIClientBase;
 
-export class APIClient extends APIClientBase implements BaseClient {
+export class ACMClient extends APIClientBase implements BaseClient {
 
   /**
    * cluster-client wrapper client
