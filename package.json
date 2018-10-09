@@ -49,6 +49,7 @@
     "build": "midway-bin build --ts"
   },
   "files": [
+    "d.ts",
     "dist"
   ]
 }
