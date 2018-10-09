@@ -1,5 +1,5 @@
 
-2.0.0 / 2018-10-09
+3.0.0 / 2018-10-09
 ==================
 
   * feat: revert refactor and ready publish 2.0 version
