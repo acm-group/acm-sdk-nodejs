@@ -5,7 +5,7 @@ const ACMClient = require('acm-client').ACMClient;
 const client = new ACMClient({
   endpoint: 'acm.aliyun.com',
   namespace: '81597370-5076-4216-9df5-538a2b55bac3',
-  accessKey: '4c796a4dcd0d4f5895d4ba83a296b489',
+  accessKey: '4c796a4dcd0d4f5895d4ba83a296b489',    // this accessKey just for testing and unstable，please put your key in application
   secretKey: 'UjLemP8inirhjMg1NZyY0faOk1E=',
   ssl: false
 });
