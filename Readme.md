@@ -24,6 +24,9 @@ const acm = new ACMClient({
   requestTimeout: 6000, // 请求超时时间，默认6s
 });
 
+// 务必要等待 ready
+await client.ready();
+
 // 主动拉取配置
 const content= await acm.getConfig('test', 'DEFAULT_GROUP');
 console.log('getConfig = ',content);

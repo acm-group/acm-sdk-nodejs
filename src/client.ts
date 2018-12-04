@@ -26,7 +26,7 @@ const DEFAULT_OPTIONS = {
   refreshInterval: 30000,
   cacheDir: path.join(osenv.home(), '.node-diamond-client-cache'),
   httpclient: urllib,
-  ssl: true,
+  ssl: false,
 };
 
 export class DataClient extends Base implements BaseClient {
