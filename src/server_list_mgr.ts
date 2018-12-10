@@ -1,5 +1,5 @@
 import { Snapshot } from './snapshot';
-import { DiamondError, IServerListManager, serverListMgrOptions } from './interface';
+import { DiamondError, IServerListManager, ServerListMgrOptions } from './interface';
 import { CURRENT_UNIT } from './const';
 
 const Base = require('sdk-base');
@@ -32,7 +32,7 @@ export class ServerListManager extends Base implements IServerListManager {
    *   - {String} nameServerAddr - 命名服务器地址 `hostname:port`
    * @constructor
    */
-  constructor(options: serverListMgrOptions) {
+  constructor(options: ServerListMgrOptions) {
     assert(options.httpclient, '[diamond#ServerListManager] options.httpclient is required');
     options.snapshot = options.snapshot || new Snapshot(options);
 

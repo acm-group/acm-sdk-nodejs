@@ -14,7 +14,6 @@ describe('test/index.test.ts', () => {
       accessKey: '4c796a4dcd0d4f5895d4ba83a296b489',
       secretKey: 'UjLemP8inirhjMg1NZyY0faOk1E=',
       httpclient,
-      ssl: false
     });
     await client.ready();
   });

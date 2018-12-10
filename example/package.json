@@ -1,0 +1,7 @@
+{
+  "name": "acm-example",
+  "version": "1.0.0",
+  "dependencies": {
+    "acm-client": "^3.0.0"
+  }
+}

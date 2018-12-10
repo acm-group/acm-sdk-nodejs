@@ -205,7 +205,7 @@ export interface DiamondEnvOptions {
   unit?: string;
 }
 
-export interface serverListMgrOptions {
+export interface ServerListMgrOptions {
   httpclient?: any;
   snapshot?: ISnapshot;
   endpoint?: string;
