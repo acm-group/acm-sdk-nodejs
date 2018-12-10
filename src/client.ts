@@ -4,7 +4,7 @@ import {
   IDiamondEnv,
   IServerListManager,
   ISnapshot,
-  serverListMgrOptions
+  ServerListMgrOptions
 } from './interface';
 import { ServerListManager } from './server_list_mgr';
 import { DiamondEnv } from './diamond_env';
@@ -287,7 +287,7 @@ export class DataClient extends Base implements BaseClient {
     return new DiamondEnv(options);
   }
 
-  protected getServerListManager(options: serverListMgrOptions): IServerListManager {
+  protected getServerListManager(options: ServerListMgrOptions): IServerListManager {
     return new ServerListManager(options);
   }
 

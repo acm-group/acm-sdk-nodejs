@@ -40,7 +40,7 @@
   },
   "scripts": {
     "autod": "midway-bin autod",
-    "lint": "tslint . --ext .ts",
+    "lint": "tslint -c tslint.json --project .",
     "test": "npm run test-local",
     "test-local": "TEST_REPORTER=spec midway-bin test --ts",
     "cov": "TEST_REPORTER=spec TEST_TIMEOUT=20000 midway-bin cov --ts",
