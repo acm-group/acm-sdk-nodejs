@@ -16,7 +16,7 @@ const DEFAULT_OPTIONS = {
   refreshInterval: 30 * 1000, // 30s
   requestTimeout: 5000,
   unit: CURRENT_UNIT,
-  ssl: true,
+  ssl: false,
 };
 
 export class DiamondEnv extends Base implements IDiamondEnv {

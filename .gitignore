@@ -19,3 +19,4 @@ coverage/
 run
 dist
 .cache
+package-lock.json
