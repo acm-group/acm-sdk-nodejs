@@ -16,7 +16,7 @@ $ npm i acm-client --save
 import {ACMClient} from 'acm-client';   // ts
 const ACMClient = require('acm-client').ACMClient; //js
 
-const acm = new ACMClient({
+const client = new ACMClient({
   endpoint: 'acm.aliyun.com', // acm 控制台查看
   namespace: '***************', // acm 控制台查看
   accessKey: '***************', // acm 控制台查看
@@ -28,11 +28,11 @@ const acm = new ACMClient({
 await client.ready();
 
 // 主动拉取配置
-const content= await acm.getConfig('test', 'DEFAULT_GROUP');
+const content= await client.getConfig('test', 'DEFAULT_GROUP');
 console.log('getConfig = ',content);
 
 // 监听数据更新
-acm.subscribe({
+client.subscribe({
   dataId: 'test',
   group: 'DEFAULT_GROUP',
 }, content => {
@@ -40,23 +40,23 @@ acm.subscribe({
 });
 
 // 发布配置接口
-const content= await acm.publishSingle('test', 'DEFAULT_GROUP', '测试');
+const content= await client.publishSingle('test', 'DEFAULT_GROUP', '测试');
 console.log('getConfig = ',content);
 
 // 删除配置
-await acm.remove('test', 'DEFAULT_GROUP');
+await client.remove('test', 'DEFAULT_GROUP');
 
 // 批量获取配置
-const content = await amc.batchGetConfig(['test', 'test1'], 'DEFAULT_GROUP');
+const content = await client.batchGetConfig(['test', 'test1'], 'DEFAULT_GROUP');
 
 // 获取所有配置
-const configList = await amc.getAllConfigInfo();
+const configList = await client.getAllConfigInfo();
 ```
 
 ### Error Events 异常处理
 
 ```js
-acm.on('error', function (err) {
+client.on('error', function (err) {
   // 可以在这里统一进行日志的记录
   // 如果不监听错误事件，所有的异常都将会打印到 stderr
 });
